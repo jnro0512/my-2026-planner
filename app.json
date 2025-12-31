@@ -4,10 +4,13 @@
     "slug": "my-2026-planner",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
     "android": {
       "package": "com.jnro0512.planner"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "jnro0512"
+      }
     }
   }
 }
