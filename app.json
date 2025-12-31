@@ -1,11 +1,13 @@
 {
   "expo": {
-    "name": "2026 Planner",
+    "name": "2026 計畫表",
     "slug": "my-2026-planner",
     "version": "1.0.0",
-    "sdkVersion": "51.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
     "android": {
-      "package": "com.planner.app"
+      "package": "com.jnro0512.planner"
     }
   }
 }

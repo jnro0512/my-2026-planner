@@ -3,7 +3,9 @@ import {
   StyleSheet, Text, View, TouchableOpacity, ScrollView, 
   TextInput, SafeAreaView, StatusBar, Alert 
 } from 'react-native';
+// 這裡改用手機專用的儲存套件
 import AsyncStorage from '@react-native-async-storage/async-storage';
+// 這裡改用手機專用的圖示套件
 import { Plus, RotateCcw, CheckCircle2, Circle, Trash2 } from 'lucide-react-native';
 
 const APP_STORAGE_KEY = '2026_planner_data';
@@ -29,7 +31,7 @@ export default function App() {
     { id: 'yearly', label: '每年總計' }
   ];
 
-  // 改用 AsyncStorage 代替 localStorage (手機端儲存方式)
+  // 讀取手機本地存檔
   useEffect(() => {
     const loadData = async () => {
       try {
@@ -42,6 +44,7 @@ export default function App() {
     loadData();
   }, []);
 
+  // 儲存資料到手機
   useEffect(() => {
     const saveData = async () => {
       try {
@@ -84,8 +87,3 @@ export default function App() {
       ...prev,
       [tabId]: prev[tabId].filter(item => item.id !== itemId)
     }));
-  };
-
-  const resetReview = () => {
-    Alert.alert("提醒", "確定要重置每月固定檢視嗎？", [
-      { text: "取消"
