@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Plus, RotateCcw, CheckCircle2, Circle, Trash2 } from 'lucide-react';
+import { Plus, RotateCcw, CheckCircle2, Circle, Trash2 } from 'lucide-react-native';
 
 const APP_STORAGE_KEY = '2026_planner_data';
 
